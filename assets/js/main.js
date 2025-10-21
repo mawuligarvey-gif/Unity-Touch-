@@ -67,4 +67,4 @@ window.addEventListener('scroll', function() {
     } else {
         navbar.style.background = 'var(--primary-color)';
     }
-});
+}); 
