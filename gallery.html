@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery — Unity Touch Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Unity Touch Academy</div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Gallery Section -->
+    <section class="gallery gallery-highlights">
+        <div class="container">
+            <h2 class="section-title">Gallery Highlights</h2>
+            <p class="section-sub">Relive our best tournament moments.</p>
+
+            <!-- Masonry-style gallery using CSS columns for a simple, responsive masonry effect -->
+            <div class="masonry" id="masonry-gallery">
+                <!-- Gallery items updated to use existing image files from assets/images/ -->
+                <div class="masonry-item"><img src="assets/images/gal-img-1.jpg" alt="Gallery image 1" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gal-img-2.jpg" alt="Gallery image 2" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gal-img-3.jpg" alt="Gallery image 3" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gal-img-4.jpg" alt="Gallery image 4" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gal-img-5.jpg" alt="Gallery image 5" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gal-img-6.jpg" alt="Gallery image 6" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gal-img-7.jpg" alt="Gallery image 7" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gal-img-8.jpg" alt="Gallery image 8" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gallery image 7 .jpg" alt="Gallery image 9" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gallery image 8 .jpg" alt="Gallery image 10" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gallery image 9.jpg" alt="Gallery image 11" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gallery image 10.jpg" alt="Gallery image 12" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gallery image 11.jpg" alt="Gallery image 13" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/galleryimage 6.jpg" alt="Gallery image 14" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/image 5.jpg" alt="Gallery image 15" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/pic1.jpg" alt="Gallery image 16" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/pic2.jpg" alt="Gallery image 17" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/pic3.jpg" alt="Gallery image 18" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/pic4.jpg" alt="Gallery image 19" loading="lazy"></div>
+                <!-- Fallbacks to reach 21 items (duplicates of existing images) -->
+                <div class="masonry-item"><img src="assets/images/gal-img-1.jpg" alt="Gallery image 20" loading="lazy"></div>
+                <div class="masonry-item"><img src="assets/images/gal-img-2.jpg" alt="Gallery image 21" loading="lazy"></div>
+
+                <!-- Video item: uses user's video file named 'video' in the images folder -->
+                <div class="masonry-item masonry-video" data-type="video" data-src="assets/images/video.mp4">
+                    <img src="assets/images/gallery image 11.jpg" alt="Video thumbnail" loading="lazy">
+                    <div class="video-play">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal / Lightbox -->
+            <div id="lightbox" class="lightbox" aria-hidden="true">
+                <div class="lightbox-content" role="dialog" aria-modal="true">
+                    <button class="lightbox-close" aria-label="Close">&times;</button>
+                    <div class="lightbox-media"></div>
+                    <button class="lightbox-prev" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+                    <button class="lightbox-next" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@unitysport2" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-tiktok"></i>
+                    <span>@unitysport2</span>
+                </a>
+                <a href="https://www.instagram.com/unity_sportsacademy" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>@unity_sportsacademy</span>
+                </a>
+            </div>
+            <p>&copy; 2025 Unity Touch Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

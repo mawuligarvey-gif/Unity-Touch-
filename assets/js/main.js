@@ -24,22 +24,24 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Contact Form Handling
 const contactForm = document.getElementById('contact-form');
 
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form values
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    // Here you would typically send this data to a server
-    // For now, we'll just log it to console
-    console.log('Form submitted:', { name, email, message });
-    
-    // Clear form
-    contactForm.reset();
-    alert('Thank you for your message! We will get back to you soon.');
-});
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        // Here you would typically send this data to a server
+        // For now, we'll just log it to console
+        console.log('Form submitted:', { name, email, message });
+        
+        // Clear form
+        contactForm.reset();
+        alert('Thank you for your message! We will get back to you soon.');
+    });
+}
 
 // Intersection Observer for Animation
 const observerOptions = {
@@ -78,6 +80,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const dotsContainer = document.querySelector('.slider-dots');
     let currentSlide = 0;
 
+    // If there's no slider on this page, skip slider initialization
+    if (!slider || slides.length === 0) return;
+
+    // Ensure slider width matches total slides and set each slide's flex-basis
+    // This makes translateX percentage math consistent across browsers
+    slider.style.width = `${slides.length * 100}%`;
+    slides.forEach(slide => {
+        slide.style.flex = `0 0 ${100 / slides.length}%`;
+    });
     // Create dots
     slides.forEach((_, index) => {
         const dot = document.createElement('div');
@@ -97,7 +108,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function goToSlide(n) {
         currentSlide = n;
-        const offset = -currentSlide * 100;
+        // Translate as a percentage of the slider width so each slide moves by 1 unit
+        // Each slide is 1 / slides.length of the slider width, so offset percent = 100 / slides.length
+        const percentPerSlide = 100 / slides.length;
+        const offset = -currentSlide * percentPerSlide;
         slider.style.transform = `translateX(${offset}%)`;
         updateDots();
     }
@@ -112,9 +126,9 @@ document.addEventListener('DOMContentLoaded', function() {
         goToSlide(currentSlide);
     }
 
-    // Event listeners
-    nextButton.addEventListener('click', nextSlide);
-    prevButton.addEventListener('click', prevSlide);
+    // Event listeners (guard buttons)
+    if (nextButton) nextButton.addEventListener('click', nextSlide);
+    if (prevButton) prevButton.addEventListener('click', prevSlide);
 
     // Auto-advance slides every 5 seconds
     let slideInterval = setInterval(nextSlide, 5000);
