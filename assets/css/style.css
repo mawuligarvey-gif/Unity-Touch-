@@ -634,3 +634,93 @@ body {
     .lightbox-close { top: 12px; right: 12px; color: #fff; }
     .lightbox-content { width: 95vw; }
 }
+
+/* -----------------------------
+   News / Article styles
+   ----------------------------- */
+.news-hero {
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../images/gal-img-1.jpg') center/cover no-repeat;
+    color: #fff;
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.article-meta {
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.article-content {
+    padding: 3rem 0;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.75;
+}
+
+.article-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1.5rem 0;
+    border-radius: 8px;
+}
+
+.news-list {
+    padding: 3rem 0;
+}
+
+.news-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+.news-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.news-meta {
+    font-size: 0.9rem;
+    color: rgba(0,0,0,0.6);
+    margin-bottom: 1rem;
+}
+
+/* -----------------------------
+   Registration page/form styles
+   ----------------------------- */
+.register-page {
+    padding: 3rem 0;
+}
+
+.form-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    max-width: 760px;
+    margin: 0 auto 2rem;
+}
+
+.form-row { display: flex; gap: 1rem; }
+.form-row .form-group { flex: 1; }
+
+.form-error { color: #b00020; font-size: 0.9rem; margin-top: 0.35rem; }
+
+.pdf-preview {
+    max-width: 900px;
+    margin: 1rem auto 2rem;
+}
+
+.success-message {
+    background: #e6ffed;
+    border: 1px solid #7fe2a7;
+    padding: 1rem;
+    border-radius: 6px;
+    color: #054a23;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 800px) {
+    .form-row { flex-direction: column; }
+}

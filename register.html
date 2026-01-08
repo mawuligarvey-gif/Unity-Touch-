@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Register — Unity Touch Academy</title>
+    <meta name="description" content="Register for Unity Touch Academy programs and camps.">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Unity Touch Academy</div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="register-page container">
+        <h2 class="section-title">Registration</h2>
+        <p class="section-sub">Download the official registration form or fill the web form below.</p>
+
+        <div class="form-card">
+            <p>If you prefer, download and print the official form here:
+                <a href="assets/docs/registration.pdf" download>Download registration PDF</a>
+            </p>
+            <div class="pdf-preview">
+                <!-- Embed the PDF if available; replace file at assets/docs/registration.pdf -->
+                <embed src="assets/docs/registration.pdf" type="application/pdf" width="100%" height="360px">
+                </embed>
+            </div>
+
+            <form id="registerForm" class="register-form" method="POST" action="https://formspree.io/f/YOUR_FORM_ID" enctype="multipart/form-data">
+                <!-- Replace YOUR_FORM_ID with your actual Formspree form ID -->
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First name</label>
+                        <input id="firstName" name="firstName" required>
+                        <div class="form-error" id="error-firstName"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last name</label>
+                        <input id="lastName" name="lastName" required>
+                        <div class="form-error" id="error-lastName"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender">
+                            <option value="">Select gender</option>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                        <div class="form-error" id="error-gender"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="dob">Date of birth</label>
+                        <input id="dob" type="date" name="dob" required>
+                        <div class="form-error" id="error-dob"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="school">School</label>
+                        <input id="school" name="school">
+                    </div>
+                    <div class="form-group">
+                        <label for="class">Class / Age</label>
+                        <input id="class" name="class">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input id="email" type="email" name="email" required>
+                        <div class="form-error" id="error-email"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input id="phone" name="phone" required>
+                        <div class="form-error" id="error-phone"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="program">Program</label>
+                        <select id="program" name="program" required>
+                            <option value="">Choose a program</option>
+                            <option>Winter Training Camp</option>
+                            <option>Weekend Clinics</option>
+                            <option>Youth League</option>
+                        </select>
+                        <div class="form-error" id="error-program"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input id="address" name="address">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="guardian">Guardian / Parent</label>
+                        <input id="guardian" name="guardian">
+                        <div class="form-error" id="error-guardian"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="guardianPhone">Guardian Phone</label>
+                        <input id="guardianPhone" name="guardianPhone">
+                        <div class="form-error" id="error-guardianPhone"></div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="emergency">Emergency contact</label>
+                        <input id="emergency" name="emergency">
+                    </div>
+                    <div class="form-group">
+                        <label for="emergencyPhone">Emergency contact phone</label>
+                        <input id="emergencyPhone" name="emergencyPhone">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="medical">Medical conditions</label>
+                        <textarea id="medical" name="medical" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="allergies">Allergies</label>
+                        <textarea id="allergies" name="allergies" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="height">Height (cm)</label>
+                        <input id="height" name="height" type="number" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="weight">Weight (kg)</label>
+                        <input id="weight" name="weight" type="number" min="0">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="idNumber">ID / Registration No.</label>
+                        <input id="idNumber" name="idNumber">
+                    </div>
+                    <div class="form-group">
+                        <label for="idCopy">Upload ID / Birth cert (optional)</label>
+                        <input id="idCopy" name="idCopy" type="file" accept="application/pdf,image/*">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="signatureName">Guardian signature (print name)</label>
+                        <input id="signatureName" name="signatureName">
+                    </div>
+                    <div class="form-group">
+                        <label for="signatureDate">Date</label>
+                        <input id="signatureDate" name="signatureDate" type="date">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="photoConsent" name="photoConsent">
+                        I consent to photographs and media use.
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="consent" name="consent" required>
+                        I consent to receiving communications and agree to the policies.
+                    </label>
+                    <div class="form-error" id="error-consent"></div>
+                </div>
+
+                <div id="form-alert" class="success-message" style="display:none;"></div>
+
+                <button type="submit" class="submit-button">Submit Registration</button>
+            </form>
+        </div>
+
+        <p style="text-align:center; color: rgba(0,0,0,0.65);">If you need help uploading the PDF, place it at <code>assets/docs/registration.pdf</code> and refresh this page.</p>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.tiktok.com/@unitysport2" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-tiktok"></i>
+                    <span>@unitysport2</span>
+                </a>
+                <a href="https://www.instagram.com/unity_sportsacademy" target="_blank" rel="noopener noreferrer" class="social-link">
+                    <i class="fab fa-instagram"></i>
+                    <span>@unity_sportsacademy</span>
+                </a>
+            </div>
+            <p>&copy; 2025 Unity Touch Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/register.js"></script>
+</body>
+</html>
